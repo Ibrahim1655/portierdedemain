@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview - OneGoal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica Neue', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .nav-menu.active {
+            left: 0;
+        }
+    </style>
+</head>
+<body class="font-sans text-black bg-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white z-50 py-5 border-b border-black transition-shadow" id="navbar">
+        <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-wider">
+                <a href="../index.html" class="no-underline text-black inline-block">ONE<span class="text-white bg-black px-2 ml-1">GOAL</span></a>
+            </div>
+            <ul class="hidden md:flex list-none gap-8 flex-wrap">
+                <li><a href="../index.html" class="no-underline text-black font-medium uppercase text-sm tracking-wide relative hover:after:w-full after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300">Accueil</a></li>
+                <li><a href="stage.html" class="no-underline text-black font-medium uppercase text-sm tracking-wide relative hover:after:w-full after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300">Le Stage</a></li>
+                <li><a href="articles.html" class="no-underline text-black font-medium uppercase text-sm tracking-wide relative hover:after:w-full after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300">Articles</a></li>
+                <li><a href="interview.html" class="no-underline text-black font-medium uppercase text-sm tracking-wide relative hover:after:w-full after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300">Interview</a></li>
+                <li><a href="galerie.html" class="no-underline text-black font-medium uppercase text-sm tracking-wide relative hover:after:w-full after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300">Galerie</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col gap-1.5 cursor-pointer hamburger">
+                <span class="w-6 h-0.5 bg-black transition-all"></span>
+                <span class="w-6 h-0.5 bg-black transition-all"></span>
+                <span class="w-6 h-0.5 bg-black transition-all"></span>
+            </div>
+            <ul class="fixed left-[-100%] top-[70px] flex-col bg-white w-full text-center transition-all duration-300 border-t border-black py-5 gap-5 nav-menu md:hidden">
+                <li><a href="../index.html" class="no-underline text-black font-medium uppercase text-sm tracking-wide">Accueil</a></li>
+                <li><a href="stage.html" class="no-underline text-black font-medium uppercase text-sm tracking-wide">Le Stage</a></li>
+                <li><a href="articles.html" class="no-underline text-black font-medium uppercase text-sm tracking-wide">Articles</a></li>
+                <li><a href="interview.html" class="no-underline text-black font-medium uppercase text-sm tracking-wide">Interview</a></li>
+                <li><a href="galerie.html" class="no-underline text-black font-medium uppercase text-sm tracking-wide">Galerie</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-36 pb-20 bg-white text-center border-b-2 border-black">
+        <div class="max-w-7xl mx-auto px-5">
+            <h1 class="text-5xl md:text-7xl font-black tracking-widest uppercase mb-5 text-black">INTERVIEW VIDÉO</h1>
+            <p class="text-xl md:text-2xl font-light tracking-widest text-gray-600">Rencontre avec nos entraîneurs</p>
+        </div>
+    </section>
+
+    <!-- Interview Video Section -->
+    <section class="py-24 min-h-screen flex flex-col justify-center bg-black text-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid md:grid-cols-[1.2fr_1fr] gap-16 items-center">
+                <div class="relative w-full" style="padding-bottom: 56.25%;">
+                    <div class="absolute top-0 left-0 w-full h-full bg-gray-900 border-2 border-white overflow-hidden flex items-center justify-center cursor-pointer hover:bg-gray-800 transition-colors duration-300 video-placeholder">
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 transition-transform duration-300 hover:scale-110 play-button">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="white"/>
+                                <path d="M32 24L32 56L56 40L32 24Z" fill="black"/>
+                            </svg>
+                        </div>
+                        <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 z-0">
+                            <p class="text-lg font-semibold tracking-widest text-white uppercase">VIDÉO INTERVIEW</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <h3 class="text-2xl md:text-3xl font-bold uppercase tracking-wide text-white">Rencontre avec nos entraîneurs</h3>
+                    <p class="text-base leading-loose text-white opacity-80">Découvrez en exclusivité les méthodes d'entraînement et les conseils de nos coachs professionnels. Cette interview exclusive vous plonge dans l'univers du perfectionnement de gardien de but et révèle les secrets de la préparation au plus haut niveau.</p>
+                    <p class="text-base leading-loose text-white opacity-80">Nos entraîneurs partagent leur expérience et leurs techniques éprouvées pour vous aider à progresser. Apprenez les méthodes utilisées par les professionnels et découvrez comment adapter ces techniques à votre propre niveau.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10 border-t border-white">
+        <div class="max-w-7xl mx-auto px-5 text-center">
+            <div class="text-2xl font-bold tracking-wider mb-5">ONE<span class="text-black bg-white px-2 ml-1">GOAL</span></div>
+            <p>&copy; 2024 OneGoal. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
