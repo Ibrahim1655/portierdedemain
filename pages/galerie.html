@@ -26,6 +26,36 @@
         .gallery-lightbox.active {
             display: flex;
         }
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+        }
+        .carousel-item {
+            flex-shrink: 0;
+            width: 300px;
+            height: auto;
+            aspect-ratio: 3/4;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+        @keyframes autoScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-300px * 3 - 60px));
+            }
+        }
+        .carousel-track.auto-scroll {
+            animation: autoScroll 15s linear infinite;
+        }
+        .carousel-track.auto-scroll:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="font-sans text-black bg-white overflow-x-hidden">
@@ -67,63 +97,16 @@
 
     <!-- Galerie Section -->
     <section class="py-24 min-h-screen flex flex-col justify-center bg-white">
-        <div class="max-w-7xl mx-auto px-5">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-                <div class="relative w-full cursor-pointer border-2 border-black transition-all duration-300 hover:scale-105 hover:z-10 hover:shadow-2xl gallery-item" style="padding-bottom: 100%;">
-                    <div class="absolute top-0 left-0 w-full h-full bg-gray-100">
-                        <div class="w-full h-full flex items-center justify-center">
-                            <div class="text-lg font-light text-gray-600 tracking-widest">IMAGE 1</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative w-full cursor-pointer border-2 border-black transition-all duration-300 hover:scale-105 hover:z-10 hover:shadow-2xl gallery-item" style="padding-bottom: 100%;">
-                    <div class="absolute top-0 left-0 w-full h-full bg-gray-100">
-                        <div class="w-full h-full flex items-center justify-center">
-                            <div class="text-lg font-light text-gray-600 tracking-widest">IMAGE 2</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative w-full cursor-pointer border-2 border-black transition-all duration-300 hover:scale-105 hover:z-10 hover:shadow-2xl gallery-item" style="padding-bottom: 100%;">
-                    <div class="absolute top-0 left-0 w-full h-full bg-gray-100">
-                        <div class="w-full h-full flex items-center justify-center">
-                            <div class="text-lg font-light text-gray-600 tracking-widest">IMAGE 3</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative w-full cursor-pointer border-2 border-black transition-all duration-300 hover:scale-105 hover:z-10 hover:shadow-2xl gallery-item" style="padding-bottom: 100%;">
-                    <div class="absolute top-0 left-0 w-full h-full bg-gray-100">
-                        <div class="w-full h-full flex items-center justify-center">
-                            <div class="text-lg font-light text-gray-600 tracking-widest">IMAGE 4</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative w-full cursor-pointer border-2 border-black transition-all duration-300 hover:scale-105 hover:z-10 hover:shadow-2xl gallery-item" style="padding-bottom: 100%;">
-                    <div class="absolute top-0 left-0 w-full h-full bg-gray-100">
-                        <div class="w-full h-full flex items-center justify-center">
-                            <div class="text-lg font-light text-gray-600 tracking-widest">IMAGE 5</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative w-full cursor-pointer border-2 border-black transition-all duration-300 hover:scale-105 hover:z-10 hover:shadow-2xl gallery-item" style="padding-bottom: 100%;">
-                    <div class="absolute top-0 left-0 w-full h-full bg-gray-100">
-                        <div class="w-full h-full flex items-center justify-center">
-                            <div class="text-lg font-light text-gray-600 tracking-widest">IMAGE 6</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative w-full cursor-pointer border-2 border-black transition-all duration-300 hover:scale-105 hover:z-10 hover:shadow-2xl gallery-item" style="padding-bottom: 100%;">
-                    <div class="absolute top-0 left-0 w-full h-full bg-gray-100">
-                        <div class="w-full h-full flex items-center justify-center">
-                            <div class="text-lg font-light text-gray-600 tracking-widest">IMAGE 7</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative w-full cursor-pointer border-2 border-black transition-all duration-300 hover:scale-105 hover:z-10 hover:shadow-2xl gallery-item" style="padding-bottom: 100%;">
-                    <div class="absolute top-0 left-0 w-full h-full bg-gray-100">
-                        <div class="w-full h-full flex items-center justify-center">
-                            <div class="text-lg font-light text-gray-600 tracking-widest">IMAGE 8</div>
-                        </div>
-                    </div>
+        <div class="max-w-7xl mx-auto px-5 w-full">
+            <div class="carousel-container border-2 border-black">
+                <div class="carousel-track auto-scroll" id="carouselTrack">
+                    <img src="../assets/images/fond1.jpg" alt="Image 1" class="carousel-item cursor-pointer gallery-item border-2 border-black object-cover">
+                    <img src="../assets/images/fond2.jpg" alt="Image 2" class="carousel-item cursor-pointer gallery-item border-2 border-black object-cover">
+                    <img src="../assets/images/fond3.jpg" alt="Image 3" class="carousel-item cursor-pointer gallery-item border-2 border-black object-cover">
+                    <!-- Dupliquer les images pour créer une boucle infinie -->
+                    <img src="../assets/images/fond1.jpg" alt="Image 1" class="carousel-item cursor-pointer gallery-item border-2 border-black object-cover">
+                    <img src="../assets/images/fond2.jpg" alt="Image 2" class="carousel-item cursor-pointer gallery-item border-2 border-black object-cover">
+                    <img src="../assets/images/fond3.jpg" alt="Image 3" class="carousel-item cursor-pointer gallery-item border-2 border-black object-cover">
                 </div>
             </div>
             <div class="hidden fixed z-[2000] left-0 top-0 w-full h-full bg-black/95 overflow-hidden items-center justify-center gallery-lightbox" id="lightbox">
@@ -140,6 +123,9 @@
             </div>
         </div>
     </section>
+    <div class="mb-20">
+         A SUPPRIMER , METTRE 2 CARROUSEL UN POUR LES IMG PORTRAIT ET UNNAUTRE POUR LES PAYSAGES , REDIMENSIOOJNNER LES IMG AU MEME FORMATS
+    </div >
 
     <!-- Footer -->
     <footer class="bg-black text-white py-10 border-t border-white">
