@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie - OneGoal</title>
+    <link rel="preload" href="../assets/images2/logo_result.webp" as="image" fetchpriority="high">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -82,11 +83,11 @@
 </head>
 <body class="font-sans text-black bg-white overflow-x-hidden">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white z-50 py-5 border-b border-black transition-shadow" id="navbar">
+    <nav class="fixed top-0 w-full bg-white z-50 py-1 border-b border-black transition-shadow" id="navbar">
         <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
             <div class="text-2xl font-bold tracking-wider">
                 <a href="../index.html" class="no-underline text-black inline-block">
-                    <img src="../assets/images2/logo_result.webp" alt="OneGoal" class="h-24 md:h-28 object-contain">
+                    <img src="../assets/images2/logo_result.webp" alt="OneGoal" class="h-28 md:h-32 object-contain" fetchpriority="high" decoding="async">
                 </a>
             </div>
             <ul class="hidden md:flex list-none gap-8 flex-wrap">
@@ -139,15 +140,15 @@
                         <img src="../assets/images2/por8_result.webp" alt="Portrait 8" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black">
                         <img src="../assets/images2/por9_result.webp" alt="Portrait 9" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black">
                         <!-- Dupliquer les images pour créer une boucle infinie -->
-                        <img src="../assets/images2/por1_result.webp" alt="Portrait 1" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/por2_result.webp" alt="Portrait 2" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/por3_result.webp" alt="Portrait 3" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/por4_result.webp" alt="Portrait 4" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/por5_result.webp" alt="Portrait 5" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/por6_result.webp" alt="Portrait 6" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/por7_result.webp" alt="Portrait 7" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/por8_result.webp" alt="Portrait 8" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/por9_result.webp" alt="Portrait 9" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black">
+                        <img src="../assets/images2/por1_result.webp" alt="Portrait 1" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/por2_result.webp" alt="Portrait 2" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/por3_result.webp" alt="Portrait 3" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/por4_result.webp" alt="Portrait 4" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/por5_result.webp" alt="Portrait 5" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/por6_result.webp" alt="Portrait 6" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/por7_result.webp" alt="Portrait 7" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/por8_result.webp" alt="Portrait 8" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/por9_result.webp" alt="Portrait 9" class="carousel-item-portrait cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -157,15 +158,15 @@
                 <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-widest text-black mb-8 text-center">TERRAINS</h2>
                 <div class="carousel-container border-2 border-black">
                     <div class="carousel-track carousel-track-landscape auto-scroll" id="carouselLandscape">
-                        <img src="../assets/images2/pay1_result.webp" alt="Paysage 1" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/pay2_result.webp" alt="Paysage 2" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/pay3_result.webp" alt="Paysage 3" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/pay4_result.webp" alt="Paysage 4" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black">
+                        <img src="../assets/images2/pay1_result.webp" alt="Paysage 1" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/pay2_result.webp" alt="Paysage 2" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/pay3_result.webp" alt="Paysage 3" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/pay4_result.webp" alt="Paysage 4" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
                         <!-- Dupliquer les images pour créer une boucle infinie -->
-                        <img src="../assets/images2/pay1_result.webp" alt="Paysage 1" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/pay2_result.webp" alt="Paysage 2" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/pay3_result.webp" alt="Paysage 3" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black">
-                        <img src="../assets/images2/pay4_result.webp" alt="Paysage 4" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black">
+                        <img src="../assets/images2/pay1_result.webp" alt="Paysage 1" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/pay2_result.webp" alt="Paysage 2" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/pay3_result.webp" alt="Paysage 3" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
+                        <img src="../assets/images2/pay4_result.webp" alt="Paysage 4" class="carousel-item-landscape cursor-pointer gallery-item border-2 border-black" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -183,10 +184,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-10 border-t border-white">
+    <footer class="bg-black text-white py-6 border-t border-white">
         <div class="max-w-7xl mx-auto px-5 text-center">
-            <div class="mb-5">
-                <img src="../assets/images2/onegoal_blanc_result.webp" alt="OneGoal" class="h-24 md:h-28 object-contain mx-auto">
+            <div class="mb-2">
+                <img src="../assets/images2/onegoal_blanc_result.webp" alt="OneGoal" class="h-28 md:h-32 object-contain mx-auto">
             </div>
             <p class="mb-3">Tous droits réservés 2025, Les portiers de demain</p>
             <p class="text-sm text-gray-400">

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les portiers de demain - OneGoal</title>
+    <link rel="preload" href="assets/images2/logo_result.webp" as="image" fetchpriority="high">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -56,11 +57,11 @@
 </head>
 <body class="font-sans text-black bg-white overflow-x-hidden">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white z-50 py-5 border-b border-black transition-shadow" id="navbar">
+    <nav class="fixed top-0 w-full bg-white z-50 py-1 border-b border-black transition-shadow" id="navbar">
         <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
             <div class="text-2xl font-bold tracking-wider">
                 <a href="index.html" class="no-underline text-black inline-block">
-                    <img src="assets/images2/logo_result.webp" alt="OneGoal" class="h-24 md:h-28 object-contain">
+                    <img src="assets/images2/logo_result.webp" alt="OneGoal" class="h-28 md:h-32 object-contain" fetchpriority="high" decoding="async">
                 </a>
             </div>
             <ul class="hidden md:flex list-none gap-8 flex-wrap">
@@ -88,7 +89,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="h-screen flex flex-col justify-center items-center text-center relative pt-20" style="background-image: url('assets/images2/fond1_result.webp'); background-size: cover; background-position: center 30%; background-repeat: no-repeat;">
+    <section class="h-screen flex flex-col justify-center items-center text-center relative pt-20" style="background-image: url('assets/images2/fond1_result.webp'); background-size: cover; background-position: center 30%; background-repeat: no-repeat;" loading="eager">
         <div class="absolute inset-0 bg-black/40"></div>
         <div class="max-w-4xl px-5 relative z-10">
             <h1 class="text-5xl md:text-7xl font-black tracking-widest leading-tight mb-5 uppercase text-white drop-shadow-lg">Les portiers<br> de demain</h1>
@@ -115,7 +116,7 @@
                     <p class="mb-8">Le stage représente pour eux un moment privilégié, hors du cadre habituel de leur club, où ils peuvent se concentrer entièrement sur leur développement personnel.</p>
                     <a href="pages/stage.html" class="inline-block px-12 py-4 bg-black text-white no-underline uppercase font-semibold tracking-widest text-sm border-2 border-black transition-all duration-300 hover:bg-white hover:text-black mt-8">En savoir plus</a>
                 </div>
-                <div class="h-96 border-2 border-black overflow-hidden" style="background-image: url('assets/images2/fond2_result.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                <div class="h-96 border-2 border-black overflow-hidden" style="background-image: url('assets/images2/fond2_result.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;" loading="lazy">
                 </div>
             </div>
         </div>
@@ -124,7 +125,7 @@
     <!-- Webdocumentaire Section -->
     <section class="py-32 relative bg-black border-t-2 border-white overflow-hidden">
         <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 opacity-20" style="background-image: url('assets/images2/fond3_result.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        <div class="absolute inset-0 opacity-20" style="background-image: url('assets/images2/fond3_result.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;" loading="lazy"></div>
         <div class="absolute inset-0 bg-black/60"></div>
         
         <div class="max-w-7xl mx-auto px-5 relative z-10">
@@ -167,10 +168,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-10 border-t border-white">
+    <footer class="bg-black text-white py-6 border-t border-white">
         <div class="max-w-7xl mx-auto px-5 text-center">
-            <div class="mb-5">
-                <img src="assets/images2/onegoal_blanc_result.webp" alt="OneGoal" class="h-24 md:h-28 object-contain mx-auto">
+            <div class="mb-2">
+                <img src="assets/images2/onegoal_blanc_result.webp" alt="OneGoal" class="h-28 md:h-32 object-contain mx-auto">
             </div>
             <p class="mb-3">Tous droits réservés 2025, Les portiers de demain</p>
             <p class="text-sm text-gray-400">
